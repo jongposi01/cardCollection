@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="카드 아카이브 사용자 매뉴얼 — 컬렉션, 카드, 바인더, 거래, 덱과 대회 관리 방법">
+  <title>카드 아카이브 사용 설명서</title>
+  <style>
+    :root{--ink:#182033;--muted:#667085;--line:#dfe4ee;--paper:#fff;--wash:#f5f7fb;--nav:#101828;--blue:#3457d5;--blue2:#eef2ff;--orange:#f79009;--shadow:0 10px 30px rgba(16,24,40,.08)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;color:var(--ink);background:var(--wash);font:16px/1.72 "Pretendard","Noto Sans KR","Malgun Gothic",system-ui,sans-serif}a{color:inherit}.layout{display:grid;grid-template-columns:280px minmax(0,860px);gap:48px;max-width:1240px;margin:auto;padding:32px 28px 80px}.side{position:sticky;top:24px;align-self:start;height:calc(100vh - 48px);overflow:auto;background:var(--nav);color:#fff;border-radius:20px;padding:26px 20px;box-shadow:var(--shadow)}.brand{padding:0 8px 20px;border-bottom:1px solid #344054}.brand strong{display:block;font-size:20px}.brand span{font-size:13px;color:#98a2b3}.side nav{padding-top:15px}.side a{display:block;text-decoration:none;color:#cbd5e1;padding:8px 10px;border-radius:8px;font-size:14px}.side a:hover{background:#253047;color:#fff}.side .top-link{margin-top:14px;color:#98a2b3}.main{min-width:0}.hero{background:linear-gradient(135deg,#213b9a,#5271e8);color:#fff;border-radius:24px;padding:54px 48px;box-shadow:var(--shadow)}.eyebrow{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.75}.hero h1{font-size:42px;line-height:1.2;margin:10px 0 14px}.hero p{margin:0;max-width:650px;color:#e2e8ff;font-size:18px}.meta{margin-top:26px;font-size:13px;color:#d5dcff}.notice{margin:24px 0;background:#fff8e8;border:1px solid #fedf89;border-left:5px solid var(--orange);border-radius:12px;padding:16px 18px}.section{background:var(--paper);border:1px solid var(--line);border-radius:20px;margin-top:26px;padding:38px 42px;box-shadow:0 4px 18px rgba(16,24,40,.04)}h2{font-size:28px;line-height:1.3;margin:0 0 8px}h3{font-size:20px;margin:30px 0 8px}.lead{color:var(--muted);margin-top:0}.steps{counter-reset:step;padding:0;list-style:none}.steps>li{counter-increment:step;position:relative;padding:4px 0 20px 48px}.steps>li:before{content:counter(step);position:absolute;left:0;top:1px;width:30px;height:30px;display:grid;place-items:center;background:var(--blue);color:#fff;border-radius:50%;font-size:14px;font-weight:700}.steps strong{display:block}.tip{background:var(--blue2);border-radius:12px;padding:14px 16px;margin:14px 0}.tip strong{display:inline}.shot{margin:22px 0;border:2px dashed #98a2b3;border-radius:16px;background:#f8fafc;min-height:250px;display:grid;place-items:center;padding:30px;text-align:center;color:#475467}.shot b{display:block;color:#344054;font-size:17px;margin-bottom:5px}.shot code{display:inline-block;margin-top:10px;background:#e9edf5;padding:3px 8px;border-radius:5px;font-size:12px}.shot small{display:block;max-width:600px}.shot img{max-width:100%;height:auto;border-radius:12px}.shot:has(img){display:block;border:0;padding:0;background:transparent}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:17px}.card h3{font-size:17px;margin:0 0 5px}.card p{margin:0;color:var(--muted);font-size:14px}.keys{width:100%;border-collapse:collapse}.keys th,.keys td{border-bottom:1px solid var(--line);padding:11px 8px;text-align:left}.keys th{font-size:13px;color:var(--muted)}kbd{border:1px solid #c8ceda;border-bottom-width:2px;background:#fff;border-radius:5px;padding:2px 7px;font:13px system-ui}.warning{color:#b42318}.footer{text-align:center;color:var(--muted);padding:34px;font-size:13px}.mobile-nav{display:none}.checklist li{margin:8px 0}
+    @media(max-width:900px){.layout{display:block;padding:16px}.side{display:none}.mobile-nav{display:block;position:sticky;top:0;z-index:10;background:rgba(245,247,251,.94);backdrop-filter:blur(10px);padding:10px 0}.mobile-nav select{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:#fff}.hero{padding:40px 26px}.hero h1{font-size:34px}.section{padding:30px 24px}.grid{grid-template-columns:1fr}}
+    @media print{body{background:#fff}.layout{display:block;max-width:none;padding:0}.side,.mobile-nav{display:none}.hero{box-shadow:none;border-radius:0}.section{break-inside:avoid;box-shadow:none}.shot{min-height:160px}.footer{padding-bottom:0}}
+  </style>
+</head>
+<body id="top">
+<div class="layout">
+  <aside class="side">
+    <div class="brand"><strong>카드 아카이브</strong><span>사용 설명서 · v1.0</span></div>
+    <nav>
+      <a href="#start">1. 처음 시작하기</a><a href="#screen">2. 화면 구성</a><a href="#group">3. 그룹과 컬렉션</a><a href="#card">4. 카드 등록·관리</a><a href="#binder">5. 바인더</a><a href="#trade">6. 위시·교환</a><a href="#money">7. 구매·판매</a><a href="#deck">8. 덱 관리</a><a href="#swiss">9. 스위스 대회</a><a href="#backup">10. 백업·복원</a><a href="#settings">11. 설정과 단축키</a><a href="#faq">12. 자주 묻는 질문</a><a class="top-link" href="#captures">📷 캡처 목록</a><a class="top-link" href="#top">↑ 맨 위로</a>
+    </nav>
+  </aside>
+  <main class="main">
+    <div class="mobile-nav"><select aria-label="목차" onchange="if(this.value) location.hash=this.value"><option value="">목차 바로가기</option><option value="#start">처음 시작하기</option><option value="#card">카드 등록·관리</option><option value="#binder">바인더</option><option value="#money">구매·판매</option><option value="#swiss">스위스 대회</option><option value="#backup">백업·복원</option><option value="#captures">캡처 목록</option></select></div>
+    <header class="hero"><div class="eyebrow">Card Archive User Guide</div><h1>카드를 모으는 시간에<br>더 집중하세요.</h1><p>그룹과 도감을 만들고, 카드 이미지와 보유 수량을 기록하고, 바인더·거래·덱·대회까지 관리하는 방법을 안내합니다.</p><div class="meta">대상 앱 버전 1.0 · 최종 수정 2026-09-17</div></header>
+    <div class="notice"><strong>매뉴얼 제작자 안내</strong><br>점선 상자는 화면 캡처를 넣을 자리입니다. 안내된 파일명으로 <code>images</code> 폴더에 저장하면, 아래 주석의 이미지 태그로 교체할 수 있습니다.</div>
+
+    <section class="section" id="start"><h2>1. 처음 시작하기</h2><p class="lead">앱을 처음 실행했다면 그룹 → 컬렉션 → 카드 순서로 등록합니다.</p>
+      <ol class="steps"><li><strong>최상위 그룹을 만듭니다.</strong>상단의 <b>컬렉션 → 새 그룹</b>을 선택하고 카드 종류를 대표하는 이름을 입력합니다.</li><li><strong>그룹의 분류값을 준비합니다.</strong><b>컬렉션 → 그룹 설정</b>에서 시리즈/세트, 희귀도, 변형, 상태를 한 줄에 하나씩 등록합니다.</li><li><strong>컬렉션을 만듭니다.</strong>왼쪽의 <b>새 컬렉션</b>을 누르고 도감 이름을 입력합니다.</li><li><strong>첫 카드를 등록합니다.</strong>상단 도구 모음의 카드 추가 버튼 또는 <kbd>Ctrl</kbd>+<kbd>N</kbd>을 누릅니다.</li></ol>
+      <div class="shot"><img src="images/01-main-dashboard.png"></img></div>
+      <!-- 캡처 후 위 .shot 전체를 다음으로 교체: <figure class="shot"><img src="images/01-main-dashboard.png" alt="카드 아카이브 대시보드 전체 화면"></figure> -->
+    </section>
+
+    <section class="section" id="screen"><h2>2. 화면 구성</h2><p class="lead">같은 기능을 상단 메뉴, 아이콘 도구 모음, 왼쪽 탐색 메뉴에서 열 수 있습니다.</p><div class="grid"><div class="card"><h3>상단 메뉴</h3><p>파일, 컬렉션, 카드, 대회, 바인더, 교환, 통계, 설정 기능을 찾습니다.</p></div><div class="card"><h3>빠른 도구 모음</h3><p>카드 추가, 도감, 바인더, 거래, 덱, 대회, 통계, 백업을 바로 엽니다.</p></div><div class="card"><h3>왼쪽 탐색</h3><p>현재 작업 화면을 전환합니다. 아래쪽에서 그룹과 컬렉션을 선택합니다.</p></div><div class="card"><h3>작업 영역</h3><p>선택한 기능의 목록, 입력 양식, 통계가 표시됩니다.</p></div></div></section>
+
+    <section class="section" id="group"><h2>3. 그룹과 컬렉션</h2><p class="lead">그룹은 여러 컬렉션을 묶는 가장 큰 단위입니다. 같은 분류 기준을 공유할 도감을 한 그룹에 두세요.</p>
+      <h3>그룹 설정하기</h3><ol class="steps"><li><strong>컬렉션 → 그룹 설정을 엽니다.</strong>왼쪽에서 수정할 그룹을 고릅니다.</li><li><strong>분류값을 입력합니다.</strong>시리즈/세트, 희귀도, 변형, 상태 탭마다 한 줄에 하나씩 입력합니다.</li><li><strong>저장을 누릅니다.</strong>이 값들은 카드를 등록할 때 선택 목록으로 나타납니다.</li></ol>
+      <div class="shot"><img style="padding:5px;" src="images/02-group-settings.png"></img></div>
+      <h3>도감 옮기기와 공유하기</h3><p><b>카드 도감</b> 화면의 <b>현재 도감 내보내기</b>는 이미지까지 포함한 <code>.cardcatalog</code> 파일을 만듭니다. 받은 파일은 원하는 그룹을 선택한 뒤 <b>다른 도감 추가</b>로 가져옵니다. 이름이 겹치면 번호가 붙습니다.</p><div class="tip"><strong>주의:</strong> <b>현재 도감 삭제</b>은 카드와 연결된 바인더·덱 정보에 영향을 줄 수 있습니다. 삭제 전에 전체 백업을 만들어 두세요.</div>
+    </section>
+
+    <section class="section" id="card"><h2>4. 카드 등록·관리</h2><p class="lead">카드명만 필수이며, 나머지는 필요에 따라 입력할 수 있습니다.</p>
+      <ol class="steps"><li><strong>카드 추가를 누릅니다.</strong>등록할 컬렉션이 왼쪽 아래에서 선택되어 있는지 먼저 확인합니다.</li><li><strong>기본 정보를 입력합니다.</strong>카드 번호, 카드명, 보유 수량, 교환 가능 수량, 위시 수량, 구매 가격을 기록합니다.</li><li><strong>이미지를 선택합니다.</strong>PNG, JPG, JPEG, WEBP 파일을 사용할 수 있습니다.</li><li><strong>분류와 메모를 입력합니다.</strong>시리즈, 희귀도, 변형, 언어, 상태, 보관장소, 태그, 비고를 기록하고 저장합니다.</li></ol>
+      <div class="shot"><img src="images/03-add-card.png"></img></div>
+      <h3>검색하고 수정하기</h3><p>카드 도감의 검색창은 카드명, 번호, 시리즈, 태그, 보관장소, 메모를 함께 검색합니다. 오른쪽 필터에서 전체·보유·미보유·중복·교환 가능·위시·이미지 없음을 골라 빠르게 좁힐 수 있습니다. 카드 이미지를 열면 확대 보기에서 좌우 이동과 수정이 가능합니다.</p>
+      <div class="shot"><img src="images/04-card-catalog.png"></img></div>
+    </section>
+
+    <section class="section" id="binder"><h2>5. 바인더</h2><p class="lead">실물 바인더의 포켓 배치를 앱 안에 그대로 기록합니다.</p><ol class="steps"><li><strong>왼쪽에서 바인더를 엽니다.</strong>페이지 이동 버튼으로 원하는 페이지를 고릅니다.</li><li><strong>빈 포켓을 누릅니다.</strong>그룹과 컬렉션을 선택하고 보유 중인 카드를 고릅니다.</li><li><strong>배치를 저장합니다.</strong>카드를 바꾸려면 해당 포켓을 다시 누르고, 비우려면 <b>비우기</b>를 누릅니다.</li></ol><div class="shot">
+	<img src="images/05-binder.png"></img>
+	</div></section>
+
+    <section class="section" id="trade"><h2>6. 위시·교환</h2><p class="lead">선택한 최상위 그룹의 모든 컬렉션을 합쳐 표시합니다.</p><p>카드 수정 화면에서 <b>교환 가능</b> 수량을 1 이상 지정하면 교환 가능 목록에, <b>위시 수량</b>을 1 이상 지정하면 위시리스트에 나타납니다. 교환 가능 수량은 보유 수량을 넘지 않도록 저장됩니다.</p><div class="shot">
+	<img src="images/06-wish-trade.png"></img>
+	</div></section>
+
+    <section class="section" id="money"><h2>7. 구매·판매</h2><p class="lead">거래 기록은 그룹 단위로 합산하며 구매액, 판매액, 손익을 보여줍니다.</p>
+      <h3>거래 기록 직접 입력</h3><p><b>구매 · 판매</b>에서 <b>+ 구매 기록</b> 또는 <b>+ 판매 기록</b>을 누릅니다. 컬렉션과 카드를 선택하고 날짜, 수량, 통화, 장당 가격, 배송비와 수수료를 입력합니다. 기준 통화와 다른 거래는 요약 합계에서 제외됩니다.</p>
+      <h3>판매·구매 목록 이용</h3><p><b>카드 판매 등록</b> 또는 <b>카드 구매 등록</b>에서 여러 카드를 고르고 가격과 장수를 입력할 수 있습니다. 완료 처리하면 거래 기록과 보유 수량에 반영됩니다. 가격과 수량을 입력한 목록은 공유용 이미지로 만들 수도 있습니다.</p>
+      <div class="shot"><img src="images/07-transactions.png"></img></div>
+      <div class="tip"><strong>기록 삭제:</strong> 거래 기록을 삭제하면 해당 거래로 바뀐 카드 보유 수량도 원래대로 조정됩니다.</div>
+    </section>
+
+    <section class="section" id="deck"><h2>8. 덱 관리</h2><p class="lead">그룹 안의 카드를 덱에 추가하고 목표 장수와 부족 수량을 확인한 뒤, 완성된 덱 목록을 PNG 이미지로 저장할 수 있습니다.</p><ol class="steps"><li><strong>새 덱 만들기를 누릅니다.</strong>덱 이름, 게임 종류, 목표 장수와 메모를 입력합니다.</li><li><strong>오른쪽의 카드 추가를 누릅니다.</strong>그룹과 컬렉션을 고른 뒤 덱에 넣을 카드를 한 장 이상 선택합니다. 여러 카드를 동시에 선택할 수 있습니다.</li><li><strong>선택한 카드별 덱 수량을 지정합니다.</strong>입력한 수량이 선택한 모든 카드에 동일하게 적용됩니다. 이미 덱에 있는 카드를 다시 추가하면 기존 수량에 더해집니다.</li><li><strong>덱을 저장합니다.</strong>목록에서 현재 장수/목표 장수와 부족한 수량을 확인합니다.</li><li><strong>이미지 출력을 누릅니다.</strong>덱 이름, 전체 장수, 날짜와 카드 목록이 들어간 미리보기를 확인하고 <b>PNG 이미지 저장</b>을 누릅니다.</li></ol>
+      <div class="tip"><strong>편리한 점:</strong> 카드 추가 창은 마지막으로 선택한 그룹과 컬렉션을 기억합니다. 다음에 열면 이전 위치에서 바로 카드를 고를 수 있습니다.</div>
+      <div class="shot"><div class="shot"><img src="images/08-deck-multi-select.png"></img></div>
+      <div class="shot"><div class="shot"><img src="images/09-deck-image-export.png"></img></div>
+    </section>
+
+    <section class="section" id="swiss"><h2>9. 스위스 대회</h2><p class="lead">참가자를 등록하고 라운드별 대진과 결과, 최종 순위를 관리합니다.</p><ol class="steps"><li><strong>새 스위스 대회를 만듭니다.</strong>대회 이름과 진행할 라운드 수를 입력합니다.</li><li><strong>참가자를 등록합니다.</strong>이름과 전화번호 뒷자리를 입력합니다. 첫 라운드 전까지 참가 여부를 바꾸거나 삭제할 수 있습니다.</li><li><strong>1라운드 대진을 생성합니다.</strong>각 테이블의 승자 또는 무승부를 선택합니다. 부전승은 3점으로 자동 처리됩니다.</li><li><strong>다음 라운드를 진행합니다.</strong>필요하면 참가자를 제외하고 대진을 만듭니다. 순위는 승점, 부흐홀츠, 승리 수 순으로 정렬됩니다.</li><li><strong>최종 결과를 확인합니다.</strong>계획한 라운드가 끝나면 개인 전적과 최종 순위를 확인합니다.</li></ol>
+      <div class="shot"><img src="images/10-swiss-round.png"></img></div>
+      <div class="tip"><strong>오류 확인용 데이터:</strong> 내보낸 파일에는 참가자 이름과 전화번호 뒷자리가 포함될 수 있습니다. 전달 전에 내용을 확인하세요.</div>
+    </section>
+
+    <section class="section" id="backup"><h2>10. 백업·복원</h2><p class="lead">앱 데이터는 PC에 자동 저장되지만, 기기 고장이나 교체에 대비해 별도 백업이 필요합니다.</p>
+      <h3>전체 백업 만들기</h3><ol class="steps"><li><strong>백업 · 내보내기를 엽니다.</strong>왼쪽 메뉴나 <kbd>Ctrl</kbd>+<kbd>B</kbd>를 사용합니다.</li><li><strong>전용 백업 만들기를 누릅니다.</strong>저장 위치를 정하면 모든 데이터와 카드 이미지를 하나의 <code>.cardarchive</code> 파일로 저장합니다.</li><li><strong>파일을 안전한 곳에 복사합니다.</strong>외장 저장 장치나 개인 클라우드에 날짜별로 보관하세요.</li></ol>
+      <h3>백업 복원하기</h3><p><b>백업 가져오기</b>에서 <code>.cardarchive</code> 파일을 선택하고 복원을 승인합니다. 현재 데이터는 복원 전에 자동 저장되며, 선택한 백업 내용으로 교체됩니다. 포함된 이미지는 새 PC에도 복원됩니다.</p>
+
+      <div class="notice"><strong>복원 전 확인</strong><br>복원은 현재 데이터를 선택한 백업의 내용으로 교체합니다. 복원 직전에 최신 전체 백업을 하나 더 만들어 두는 것을 권장합니다.</div>
+    </section>
+
+    <section class="section" id="settings"><h2>11. 설정과 단축키</h2><p class="lead">상단 오른쪽에서 한국어, English, 日本語를 선택할 수 있고 환경설정에서 기준 통화와 시작 화면을 바꿀 수 있습니다.</p><table class="keys"><thead><tr><th>단축키</th><th>기능</th></tr></thead><tbody><tr><td><kbd>Ctrl</kbd>+<kbd>N</kbd></td><td>카드 추가</td></tr><tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd></td><td>카드 도감 열기 / 검색</td></tr><tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>현재 데이터 저장</td></tr><tr><td><kbd>Ctrl</kbd>+<kbd>B</kbd></td><td>백업 화면 열기</td></tr><tr><td><kbd>←</kbd> / <kbd>→</kbd></td><td>카드 확대 보기에서 이전 / 다음 카드</td></tr><tr><td><kbd>+</kbd> / <kbd>-</kbd> / <kbd>0</kbd></td><td>카드 확대 보기에서 확대 / 축소 / 원래 크기</td></tr></tbody></table></section>
+
+    <section class="section" id="faq"><h2>12. 자주 묻는 질문</h2>
+      <h3>카드 이미지도 자동 저장되나요?</h3><p>네. 선택한 이미지는 앱의 로컬 저장소에 복사됩니다. 다른 PC로 옮길 때는 이미지가 포함되는 <code>.cardarchive</code> 전체 백업을 사용하세요.</p>
+      <h3><code>.cardarchive</code>와 <code>.cardcatalog</code>의 차이는 무엇인가요?</h3><p><code>.cardarchive</code>는 앱 전체 데이터와 이미지를 보관하는 복구용 파일입니다. <code>.cardcatalog</code>는 선택한 도감 하나를 다른 사용자나 그룹에 추가하기 위한 공유용 파일입니다.</p>
+      <h3>완성률은 어떻게 계산되나요?</h3><p>현재 컬렉션에 등록된 카드 종류 가운데 보유 수량이 1장 이상인 카드 종류의 비율입니다.</p>
+      <h3>앱을 지우기 전에 무엇을 해야 하나요?</h3><p>반드시 최신 <code>.cardarchive</code> 전체 백업을 만들고, 앱 밖의 안전한 폴더에 복사한 뒤 파일이 존재하는지 확인하세요.</p>
+      <h3>공식 카드 이미지와 데이터가 포함되어 있나요?</h3><p>포함되어 있지 않습니다. 카드 정보와 이미지는 사용자가 직접 등록하며, 등록하거나 공유하는 콘텐츠의 이용 권한은 사용자가 확인해야 합니다.</p>
+	  
+	  
+	  <div class="tip"><strong>권장 캡처 규격:</strong> 앱 창 1440×900px, Windows 화면 배율 100%, PNG 형식. 카드 이미지는 직접 만든 샘플이나 사용 허가된 이미지를 사용하세요.</div>
+    </section>
+
+    <footer class="footer">카드 아카이브 사용자 설명서 · 이 문서는 브라우저의 인쇄 메뉴에서 PDF로 저장할 수 있습니다.</footer>
+  </main>
+</div>
+</body>
+</html>
